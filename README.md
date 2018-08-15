@@ -1,2 +1,2 @@
-# JavaScript-Games
-game projects in HTML/CSS/JS
+# Game-Projects
+various game projects by me
