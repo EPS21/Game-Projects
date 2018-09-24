@@ -35,7 +35,15 @@ public class VariablesAndOperations : MonoBehaviour {
         float result = (float)x / (float)y;
                 
         Debug.Log(result);
+    }
 
+    void MyMethod3()
+    {
+        bool val;
+        val = true;
+        val = false;
+
+        Debug.Log(val);
     }
 
     

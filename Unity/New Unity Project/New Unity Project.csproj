@@ -222,7 +222,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CubeController.cs" />
     <Compile Include="Assets\Scripts\SphereController.cs" />
+    <Compile Include="Assets\Scripts\Tests\AnimalClasses.cs" />
+    <Compile Include="Assets\Scripts\Tests\AnimalFactory.cs" />
     <Compile Include="Assets\Scripts\Tests\Conditionals.cs" />
+    <Compile Include="Assets\Scripts\Tests\DamageTest.cs" />
+    <Compile Include="Assets\Scripts\Tests\FieldTest.cs" />
+    <Compile Include="Assets\Scripts\Tests\NonMonoBehavior.cs" />
+    <Compile Include="Assets\Scripts\Tests\Person.cs" />
+    <Compile Include="Assets\Scripts\Tests\PersonFactory.cs" />
+    <Compile Include="Assets\Scripts\Tests\RPGClasses.cs" />
+    <Compile Include="Assets\Scripts\Tests\RPGController.cs" />
+    <Compile Include="Assets\Scripts\Tests\Scope.cs" />
     <Compile Include="Assets\Scripts\Tests\VariablesAndOperations.cs" />
   </ItemGroup>
   <ItemGroup>

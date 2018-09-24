@@ -1,6 +1,6 @@
 #include <SFML\Graphics.hpp>
 #include <time.h>
-using namespace sf; // the sfml namespace I believe
+using namespace sf; // the sfml namespace
 
 const int M = 20;
 const int N = 10;
@@ -72,16 +72,13 @@ int main()
 				window.close();
 
 			if (e.type == Event::KeyPressed)
-				if (e.key.code == Keyboard::Escape)
-					window.close();
-
-			if (e.type == Event::KeyPressed)
-				if (e.key.code == Keyboard::Up) rotate = true;
+				if (e.key.code == Keyboard::Escape) window.close();
+				else if (e.key.code == Keyboard::Up) rotate = true;
 				else if (e.key.code == Keyboard::Left) dx = -1;
 				else if (e.key.code == Keyboard::Right) dx = 1;
 		}
 
-		if (Keyboard::isKeyPressed(Keyboard::Down)) delay = 0.05;
+		if (Keyboard::isKeyPressed(Keyboard::Down)) delay = 0.01;
 
 		//// <- Move -> ////
 		for (int i = 0; i < 4; i++)

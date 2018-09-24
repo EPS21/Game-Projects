@@ -5,26 +5,21 @@ public class Conditionals : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        //RunConditionals5();
         StateHandler();
 	}
 	
     void StateHandler ()
     {
         int damageRating; // default
-        bool isInvincible = false; 
-        bool grabbedPowerUp = false;
-
-        grabbedPowerUp = false;
+        bool isInvincible = false; // default
+        bool grabbedPowerUp = false; // default        
+        
+        //grabbedPowerUp = false;
 
         if (grabbedPowerUp)
-        {
             isInvincible = true;
-        }
         else
-        {
             isInvincible = false;
-        }
 
         if (isInvincible)
         {
@@ -43,7 +38,8 @@ public class Conditionals : MonoBehaviour {
 	void RunConditionals ()
     {
         // int size: -2,147,483,648 to 2,147,483,647
-        int minInt = -2147483648;
+        //int minInt = -2147483648;
+        //int minInt1 = int.MinValue;
         int x = 100;
 
         if (x >= 100)
