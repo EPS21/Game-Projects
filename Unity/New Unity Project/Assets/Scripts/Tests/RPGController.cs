@@ -9,7 +9,7 @@ public class RPGController : MonoBehaviour {
     {
         //MethodInputsAndReturns();
         //ValueVsReference();
-        Polymorphism();
+        //Polymorphism();
     }   
 
     void MethodInputsAndReturns()

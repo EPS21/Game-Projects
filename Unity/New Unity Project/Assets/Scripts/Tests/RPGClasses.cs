@@ -13,7 +13,7 @@ public class Companion : NPC { }
 
 public class Combatant
 {
-    public Weapon weapon = new Weapon();
+    public Weapon weapon = new Weapon("sword", 100);
 }
 
 public class Wizard : Combatant { }
@@ -25,6 +25,14 @@ public class Weapon
     public string WeaponType;
     private int Degradation = 100;
 
+    // constructor
+    public Weapon(string weaponType, int degradation)
+    {
+        this.WeaponType = weaponType;
+        this.Degradation = degradation;
+    }
+
+    
     public string UseWeapon()
     {
         string phrase = "The player struck with the weapon: ";
