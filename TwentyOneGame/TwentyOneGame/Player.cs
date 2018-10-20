@@ -26,12 +26,24 @@ namespace TwentyOneGame
             {
                 Sb.Append($"Kind: {card.Kind}, Suit: {card.Suit} </br>");
             }
-            Sb.Append(calcCards());
+            Sb.Append($"{Name}'s hand total equals to {CountCards()} </br></br>");
 
             return Sb.ToString();
         }
 
-        private int calcCards()
+        /// <summary>
+        /// Overloaded ToString method takes a Player object and only displays first card they have
+        /// </summary>
+        /// <param name="dealer"></param>
+        /// <returns></returns>
+        public string ToString(Player dealer)
+        {            
+            string cardVal = dealer.PlayerCards.FirstOrDefault().Kind.ToString();
+            string cardSuit = dealer.PlayerCards.FirstOrDefault().Suit.ToString();           
+            return $"{dealer.Name} has a {cardVal} of {cardSuit}</br>";
+        }
+
+        public int CountCards()
         {
             int total = 0;
             foreach (var card in PlayerCards)

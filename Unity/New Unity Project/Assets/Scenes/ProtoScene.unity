@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 623892176}
   - component: {fileID: 623892172}
   m_Layer: 0
-  m_Name: Cube1
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55393ce52cfd7284fb000663d20f13f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: {x: 0, y: 0}
+  CubeReference: {fileID: 623892171}
   Timer: 0
 --- !u!212 &854741855
 SpriteRenderer:

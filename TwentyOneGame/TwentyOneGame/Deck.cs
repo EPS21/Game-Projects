@@ -20,11 +20,14 @@ namespace TwentyOneGame
             string[] suits = new string[] { "Clubs", "Hearts", "Diamonds", "Spades" };
             //string[] kinds = new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10",
             //                                "Jack", "Queen", "King", "Ace" };
-            Card.CardValue[] kinds = new Card.CardValue[] { Card.CardValue.TWO, Card.CardValue.THREE, Card.CardValue.ACE };            
-
-            foreach (var kind in kinds)
+            Card.CardValue[] kinds = new Card.CardValue[] { Card.CardValue.TWO, Card.CardValue.THREE, Card.CardValue.FOUR,
+                                         Card.CardValue.FIVE, Card.CardValue.SIX, Card.CardValue.SEVEN, Card.CardValue.EIGHT,
+                                         Card.CardValue.NINE, Card.CardValue.TEN, Card.CardValue.JACK, Card.CardValue.QUEEN,
+                                         Card.CardValue.KING, Card.CardValue.ACE};
+            
+            foreach (var suit in suits)
             {
-                foreach (var suit in suits)
+                foreach (var kind in kinds)
                 {
                     _Deck.Add(new Card() { Kind = kind, Suit = suit });
                 }
@@ -39,16 +42,23 @@ namespace TwentyOneGame
         /// <param name="player2"></param>
         public void DealCards(Player player1, Player player2)
         {
-            shuffle();            
+            shuffle();
+            DealCard(player1);
+            DealCard(player2);
+            DealCard(player1);
+            DealCard(player2);
+
+            /*
             while (_Deck.Count > 0)
             {
                 dealCard(player1);
                 dealCard(player2);
             }
+            */
         }
 
         // helper method to deal one card to player and remove it from deck
-        private void dealCard(Player player)
+        public void DealCard(Player player)
         {
             Card card = _Deck.ElementAt(_Deck.Count - 1);
             player.PlayerCards.Add(card);
@@ -72,12 +82,17 @@ namespace TwentyOneGame
         // returns the deck of cards in a string format (overrides default ToString method)
         public override string ToString()
         {
-            foreach (var card in _Deck)
-            {
-                Sb.Append($"Kind: {card.Kind}, Suit: {card.Suit} </br>");
-            }
-            return Sb.ToString();
+            //Sb.Append($"Number of cards in the deck: {_Deck.Count} </br>");
+            //foreach (var card in _Deck)
+            //{
+            //    Sb.Append($"Kind: {card.Kind}, Suit: {card.Suit} </br>");
+            //}
+            //return Sb.ToString();
+
+            return $"Number of cards in the deck: {_Deck.Count} </br></br>";
         }
+
+        
 
     }
 }
